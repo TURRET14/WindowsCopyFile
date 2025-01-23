@@ -16,7 +16,7 @@ int main(int argc, char* argv[]) {
 	MultiByteToWideChar(CP_UTF8, 0, argv[2], -1, File2, Size2);
 
 	if (!CopyFile(File1, File2, FALSE)) {
-		printf("Copy Error. %d", GetLastError());
+		printf("File Copy Error. %d", GetLastError());
 		return 1;
 	}
 	return 0;
